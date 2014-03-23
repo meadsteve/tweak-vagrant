@@ -87,10 +87,11 @@ apache:
                 - 'MONGO_DB_NAME tweak'
                 - 'MONGO_USER tweak'
                 - 'MONGO_PASSWORD tweak'
+                - 'COOKIE_KEY PodR4tG5rf4ED77j'
             override:
                 - All
             custom_fragment: ''
-            ssl: '1'
+            ssl: '0'
             ssl_cert: ''
             ssl_key: ''
             ssl_chain: ''
@@ -131,6 +132,7 @@ php:
         display_errors: On
         error_reporting: '-1'
         session.save_path: /var/lib/php/session
+        extension: mongo.so
     timezone: America/Chicago
 xdebug:
     install: '1'
